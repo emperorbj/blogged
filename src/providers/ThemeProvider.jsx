@@ -1,5 +1,6 @@
 "use client";
-
+// This code creates a ThemeProvider component that 
+// uses the ThemeContext to get the current theme and applies it to its child components.
 import { ThemeContext } from "@/context/ThemeContext";
 import React, { useContext, useEffect, useState } from "react";
 

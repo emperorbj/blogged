@@ -1,5 +1,7 @@
 "use client";
-
+// This code creates a "ThemeContext" that allows different 
+// parts of the app to share theme-related info (like light or dark mode). 
+// Think of it like a central theme controller.
 import { createContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext();
@@ -19,7 +21,7 @@ export const ThemeContextProvider = ({ children }) => {
   const toggle = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
-
+// updates local storage when theme changes
   useEffect(() => {
     localStorage.setItem("theme", theme);
   }, [theme]);
